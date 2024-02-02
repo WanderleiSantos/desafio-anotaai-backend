@@ -11,7 +11,7 @@ public class MongoDBConfig {
 
     @Bean
     public MongoDatabaseFactory mongoConfigure(){
-        return new SimpleMongoClientDatabaseFactory("mongodb://root:z0612c@172.23.0.3:27017/product-catalog");
+        return new SimpleMongoClientDatabaseFactory("mongodb://root:z0612c@172.23.0.2:27017/product-catalog?authSource=admin");
     }
 
     @Bean

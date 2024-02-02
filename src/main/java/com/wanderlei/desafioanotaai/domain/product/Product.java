@@ -1,6 +1,5 @@
 package com.wanderlei.desafioanotaai.domain.product;
 
-import com.wanderlei.desafioanotaai.domain.category.Category;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,5 +17,14 @@ public class Product {
     private String description;
     private String ownerId;
     private Integer price;
-    private Category category;
+    private String category;
+
+    public Product(ProductDTO data){
+        this.title = data.title();
+        this.description = data.description();
+        this.ownerId = data.ownerId();
+        this.price = data.price();
+        this.category = data.categoryId();
+    }
+
 }
